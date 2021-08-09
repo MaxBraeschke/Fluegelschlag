@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="7dp"
+        android:background="@drawable/rectangle_rounded"
+        android:backgroundTint="@color/primaryColor" />
+
+    <TextView
+        android:id="@+id/spieler_edit_sheet_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        tools:text="Max" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/spieler_edit_fortschritt_toggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spieler_edit_fortschritt_anfang"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anfänger" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spieler_edit_fortschritt_mittel"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fortgeschritten" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spieler_edit_fortschritt_profi"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profi" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spieler_edit_delete"
+            android:layout_width="0dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Löschen"
+            android:textColor="@color/red_600"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_margin="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_margin="20dp"
+            android:id="@+id/spieler_edit_speichern"
+            android:layout_width="0dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:enabled="false"
+            android:text="Speichern"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.865"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="205dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/spieler_edit_achtung_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="ACHTUNG!\nWenn der Spieler gelöscht wird, werden auch alle vom Spieler gespielten Spiele sowie die dazugehörenden Ergebnisse gelöscht."
+        android:textAlignment="center"
+        android:textColor="@color/red_600"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/spieler_edit_achtung_trotzdemloeschen"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/red_600"
+        android:text = "Trotzdem Löschen"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

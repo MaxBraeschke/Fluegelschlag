@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_spiel"
+    app:startDestination="@id/spielEingabeFragment">
+
+    <fragment
+        android:id="@+id/spielEingabeFragment"
+        android:name="com.example.fluegelschlag.SpielErgebnisse.SpielEingabeFragment"
+        android:label="SpielEingabeFragment" >
+        <action
+            android:id="@+id/action_spielEingabeFragment_to_spielErgbenisFragment"
+            app:destination="@id/spielErgbenisFragment" />
+        <action
+            android:id="@+id/action_spielEingabeFragment_to_spielZwischenFragment"
+            app:destination="@id/spielZwischenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spielErgbenisFragment"
+        android:name="com.example.fluegelschlag.SpielErgebnisse.SpielErgebnisFragment"
+        android:label="SpielErgbenisFragment" />
+    <fragment
+        android:id="@+id/spielZwischenFragment"
+        android:name="com.example.fluegelschlag.SpielErgebnisse.SpielZwischenFragment"
+        android:label="SpielZwischenFragment" >
+        <action
+            android:id="@+id/action_spielZwischenFragment_to_spielErgbenisFragment"
+            app:destination="@id/spielErgbenisFragment" />
+    </fragment>
+</navigation>

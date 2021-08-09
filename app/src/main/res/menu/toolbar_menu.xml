@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+
+        android:id="@+id/settingsIcon"
+        android:icon="@drawable/settings_toolbar"
+        android:title="Settings"
+        android:iconTint="@color/primaryColor"
+        app:showAsAction="ifRoom"
+        android:contentDescription="settings"/>
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fluegelschlag.homeBag.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/spielerFragment"
+        android:name="com.example.fluegelschlag.SpielerBag.SpielerFragment"
+        android:label="SpielerFragment" />
+    <fragment
+        android:id="@+id/statistikFragment"
+        android:name="com.example.fluegelschlag.Statistik.StatistikFragment"
+        android:label="StatistikFragment" />
+</navigation>
